@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CHALLENGE QUIZ</title>
+  <link rel="icon" href="../Black Friday/quiz.png">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <section>
+    <div class="loader"></div>
+    <div class="count"></div>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      var count = 0;
+      var counter = setInterval(function(){
+        if(count < 101){
+          $('.count').text(count + '%');
+          $('.loader').css('width', count + '%');
+          count++
+        }
+        else{
+          clearInterval(counter)
+        }
+      },80)
+    })
+  </script>
+  <div class="slideshow-container">
+
+    <div class="image-container">
+      <img src="Black Friday.png" class="image fade" />
+    </div>
+    <div class="image-container">
+      <img src="page2.png" class="image fade" />
+    </div>
+    <div class="image-container">
+      <img src="../Black Friday/3.png" class="image fade" />
+    </div>
+    <div class="image-container">
+      <img src="../Black Friday/4.png" class="image fade" />
+    </div>
+    <div class="image-container">
+      <img src="../Black Friday/5.png" class="image fade" />
+    </div>
+    <div class="image-container">
+      <img src="../Black Friday/6.png" class="image fade" />
+    </div>
+    <div class="image-container">
+      <img src="../Black Friday/7.png" class="image fade" />
+    </div>
+    <div class="image-container">
+      <img src="../Black Friday/start2.png" class="image fade" />
+    </div>
+
+    <a class="prev" onclick="newSlide(-1)">&#10094;</a>
+    <a class="next" onclick="newSlide(1)">&#10095;</a>
+
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+    </div>
+
+  </div>
+
+  <div class="content">
+    <a href="../Screen3/index.html" class="button_a">MULAI</a>
+  </div>
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

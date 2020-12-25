@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url("../images/background.jpg") no-repeat center;
+    background-size: cover;
+    font-family: sans-serif;
+    -webkit-animation: fadein 1.5s;
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.login-wrapper h1{
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    margin: 80px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+.login-wrapper{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-10%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    margin-top: 2px;
+    position: relative;
+    height: 100%;
+    max-height: 370px;
+    width: 100%;
+    max-width: 340px;
+    padding: 65px 35px 35px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+}
+.form::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.08);
+    transform: skewX(-26deg);
+    transform-origin: bottom left;
+    border-radius: 10px;
+    pointer-events: none;
+}
+.form img{
+    position: absolute;
+    top: -50px;
+    left: 118px;
+    width: 100px;
+}
+.form h2{
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    color: rgb(238, 236, 231);
+}
+.form .input-group{
+    position: relative;
+}
+.form .input-group input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background-color: transparent;
+    color: inherit;
+}
+.form .input-group label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: .3s ease-out;
+}
+.form .input-group input:focus + label,
+.form .input-group input:valid + label{
+    transform: translateY(-23px);
+    color: rgb(0, 195, 255);
+    font-synthesis: .8rem;
+}
+.submit-btn{
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: block;
+    width: 50%;
+    margin-bottom: 25px;
+    margin-left: auto;
+    border: none;
+    outline: none;
+    background: rgb(0, 195, 255);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.submit-btn:hover{
+    opacity: 0.8;
+    transition: 0.5s;
+}
+.forgot-pw{
+    color: inherit;
+    text-decoration: none;
+}
+#forgot-pw{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    z-index: 1;
+    background: rgb(39, 117, 168);
+    opacity: 0;
+    transition: 0.6s;
+}
+#forgot-pw:target{
+    height: 100%;
+    opacity: 1;
+}
+.close{
+    position: absolute;
+    right: 1.5rem;
+    top: 0.5rem;
+    font-size: 2rem;
+    font-weight: 900;
+    text-decoration: none;
+    color: inherit;
+}
